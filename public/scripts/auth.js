@@ -1,12 +1,14 @@
-const loginForm = document.querySelector('#login-form');
-const logout = document.querySelector('#logout');
-const signUpForm = document.querySelector("#signup-form");
+console.log(db)
 
 db.collection('guides').get().then( snapshot => {
     console.log(snapshot)
 }).catch((err)=> {
     console.log(err)
 });
+const loginForm = document.querySelector('#login-form');
+const logout = document.querySelector('#logout');
+const signUpForm = document.querySelector("#signup-form");
+
 //listen for changes
 auth.onAuthStateChanged(user => {
     if(user){
