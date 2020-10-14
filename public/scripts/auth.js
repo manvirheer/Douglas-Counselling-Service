@@ -2,6 +2,11 @@ const loginForm = document.querySelector('#login-form');
 const logout = document.querySelector('#logout');
 const signUpForm = document.querySelector("#signup-form");
 
+db.collection('guides').get().then( snapshot => {
+    console.log(snapshot)
+}).catch((err)=> {
+    console.log(err)
+});
 //listen for changes
 auth.onAuthStateChanged(user => {
     if(user){
