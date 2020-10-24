@@ -3,7 +3,7 @@ rules_version = '2';
     match /databases/{database}/documents {
      match /{document=**} {
        allow read;
-       allow write: if false;
+       allow write: if true;
       }
    }
 }
