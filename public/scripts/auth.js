@@ -24,6 +24,12 @@ signUpForm.addEventListener("submit", (e) => {
     console.log(email + password)
 
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
+        return db.collection('students').doc(cred.user.uid).set({
+            email ,
+            password,
+            studentName: signUpForm['signUpStudentName'].value,
+            studentID: signUpForm['signUpStudentID'].value
+          });
         console.log("Created -> ", cred);
 
         // Closing the signup modal & reset form

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Home - Focus Theme</title>
+    <title>Student Portal</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -36,7 +36,7 @@
         <div class="container">
             <!-- Navbar -->
             <nav class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
-                <a href="index.html" class="navbar-brand d-inline-flex ">Welcome, NAME_TO_SHOW!
+                <a href="index.html" class="navbar-brand d-inline-flex " id="studentGreetings">
                     <!-- <i class="material-icons ml-2" aria-hidden="true">show_chart</i> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
@@ -46,17 +46,38 @@
                 <div class="collapse navbar-collapse text-uppercase" id="navbarContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a type="button" class="nav-link" data-toggle="modal" data-target="#signInModal">Sign-In</a>
+                            <a type="button" class="nav-link" data-toggle="modal" data-target="#profileModal"><i class="material-icons  "
+                                    aria-hidden="true">person_outline</i></a>
                         </li>
-                        <li class="nav-item">
-                            <a type="button" class="nav-link" data-toggle="modal" data-target="#signUpModal">Sign-Up</a>
-                        </li>
+
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
 
+    <!-- Profile Header -->
+    <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary text-black" id="signInModalTitle">Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-info" id="logoutBtn">Logout</button>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div> -->
+
+            </div>
+        </div>
+    </div> 
     <!-- Sign In Modal -->
     <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalTitle"
         aria-hidden="true">
@@ -71,16 +92,17 @@
                 <div class="modal-body">
                     <form id="signIn-form">
                         <div class="form-group">
-                            <label for="studentEmail">Email address</label>
+                            <label for="signInStudentEmail">Email address</label>
                             <input type="email" class="form-control" id="signInStudentEmail" name="signInStudentEmail"
                                 aria-describedby="emailHelp" required>
-                            <small id="signIn-emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            <small id="signIn-emailHelp" class="form-text text-muted">We'll never share your email with
+                                anyone
                                 else.</small>
                         </div>
                         <div class="form-group">
                             <label for="studentPassword">Password</label>
-                            <input type="password" class="form-control" id="signInStudentPassword" name="signInStudentEmail"
-                                required>
+                            <input type="password" class="form-control" id="signInStudentPassword"
+                                name="signInStudentPassword" required>
                         </div>
                 </div>
                 <div class="modal-footer">
@@ -94,68 +116,22 @@
         </div>
     </div>
 
-    <!-- Sign Out Modal -->
-    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-primary text-black" id="signUpModalTitle">Sign Up</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="signUp-form">
-                        <div class="form-group">
-                            <label for="studentName">Name</label>
-                            <input class="form-control" type="text" id="signUpStudentName" name="signUpStudentName" required>
-                        </div>
 
-                        <div class="form-group">
-                            <label for="studentID">Student ID</label>
-                            <input type="password" class="form-control" id="signUpStudentID" name="signUpStudentID"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label for="studentEmail">Email address</label>
-                            <input type="email" class="form-control" id="signUpStudentEmail" name="signUpStudentEmail"
-                                aria-describedby="emailHelp" required>
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                                else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="studentPassword">Password</label>
-                            <input type="password" class="form-control" id="signUpStudentPassword" name="signUpStudentPassword"
-                                required>
-                        </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
     <main id="content">
 
         <!-- Hero -->
         <div class="container py-5">
-            <h1 class="display-4 pb-2">Here to Help.</h1>
+            <h1 class="display-4 pb-2 ml-0">Book a visit today.</h1>
             <hr class="border-3 border-white my-4 ml-0 text-left w-25" role="presentation">
             <div class="row">
                 <div class="col-lg-10">
-                    <p class="font-sans lead mb-4 text-secondary">Douglas College counsellors provide free, accessible,
-                        confidential and professional support to students. We provide one-to-one support and workshops
-                        to help you learn skills to better handle stress, increase resilience, manage sudden personal
-                        challenges, or just feel better.</p>
+                    <p class="font-sans lead mb-4 text-secondary">Find a date and time which is suitable for you.</p>
                 </div>
             </div>
             <div class="text-center my-5">
                 <a href="https://www.douglascollege.ca/student-services/student-support/counselling"
-                    class="btn btn-outline-white">View More</a>
+                    class="btn btn-outline-white">Calender</a>
+                    
             </div>
             <!-- <a href="https://themes.getbootstrap.com/product/focus/" class="btn btn-primary">Purchase - $39</a> -->
         </div>
@@ -223,7 +199,7 @@
                     </a>
                 </li>
             </ul> -->
-            
+
         </div>
 
         <!-- Testimonials -->
@@ -342,14 +318,18 @@
     <script>
         console.log(db);
         auth.onAuthStateChanged(user => {
-    if(user){
-        console.log("User logged in: ", user)
-    }
-    else{
-        console.log("User logged out")
-    }
-});
+            if (user) {
+                console.log("User logged in: ", user)
+            }
+            else {
+                console.log("User logged out")
+            }
+        });
+
+
     </script>
+
+    <script src="scripts/userPortal.js"></script>
 </body>
 
 </html>
