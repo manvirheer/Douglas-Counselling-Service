@@ -23,11 +23,11 @@ const showEvents = (data, id)=>{
     <div class="col-md-6" style="margin-bottom: 15px;">
         <div class="card">
             <div class="card-header">
-              ${data.status?'Chat':'Video'}
+              ${data.status?'Video':'Chat'}
             </div>
             <div class="card-body">
               <h5 class="card-title display-5">
-                ${data.date}
+              ${moment(data.date).format('MMM d, YYYY')}
               </h5>
               <p class="card-text"> ${data.time} with ${data.name}</p>
               <a href="#" class="btn btn-outline-black btn-primary">Book</a>
@@ -58,7 +58,7 @@ const addNewEvent = () => {
     name: form.name.value,
     date: form.date.value,
     time: form.time.value,
-    description: form.description.value,
+    // description: form.description.value,
     status: parseInt(form.status.value, 10)
   }
 
@@ -69,14 +69,15 @@ const addNewEvent = () => {
     form.name.value = "",
     form.date.value = "",
     form.time.value = "",
-    form.description.value = "",
+    // form.description.value = "",
     form.status.value = ""
-
+    $('#provideAvailability').modal('hide');
     alert('Your event has been successfully saved');
-    const modal = document.querySelector('#provideAvailability');
-    modal.closest();
+    // const modal = document.querySelector('#provideAvailability');
+    // modal.closest();
     // debugger;
     // M.Modal.getInstance(modal).close();
+    
     
     })
     .catch(err => console.log(err))

@@ -96,23 +96,27 @@
             <!-- Provide Availability form-->
             <div class = "availability-content" role="dialog" aria-labelledby="provideAvailabilityTitle" aria-hidden="true" cen> 
                 <form id = "provideAvailability-form">
-                    <div text-center my-5> 
+                    <div class="form-group">
                         <label for="counselorName" style="color: white;" >Name</label><br>
                         <input type="text" id="name"  required><br>
                     </div>
-                    <div text-center my-5>
+                    <div class="form-group">
+
                         <label for="counselingDate" style="color: white;">Date</label><br>
                         <input type="date" id="date"  required><br>
                     </div>
-                    <div text-center my-5>
+                    <div class="form-group">
+
                         <label for="counselingTime" style="color: white;">Time</label><br>
                         <input type="time" id="time"  required><br>
                     </div>
-                    <div text-center my-5>
+                    <div class="form-group">
+
                         <label for="description" style="color: white;">Description</label><br>
                         <textarea id="description" cols="30" rows="5" placeholder="Optional..."></textarea><br>
                     </div>
-                    <div>
+                    <div class="form-group">
+
                         <select id="status" required><br>
                             <option value="0">Chat</option>
                             <option value="1">Video</option>
