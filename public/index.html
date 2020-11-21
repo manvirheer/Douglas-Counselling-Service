@@ -27,6 +27,7 @@
 
     <!-- JS -->
     <script src="scripts/theme.js" defer></script>
+    <!-- <script src="scripts/userPortal.js" defer></script> -->
 </head>
 
 <body>
@@ -45,11 +46,20 @@
                 <div class="collapse navbar-collapse text-uppercase" id="navbarContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
+                            <a href = "bookAppoitment.html" type="button" class="nav-link" data-target="#bookAppointment">Book Appointment</a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a  href ="provideAvailability.html" type="button" class="nav-link"  data-target="#provideAvailability">Provide Availability</a>
+                        </li> -->
+                        <li class="nav-item">
                             <a type="button" class="nav-link" data-toggle="modal" data-target="#signInModal">Sign-In</a>
                         </li>
                         <li class="nav-item">
                             <a type="button" class="nav-link" data-toggle="modal" data-target="#signUpModal">Sign-Up</a>
                         </li>
+                        <!-- <li class="nav-item">
+                            <a type="button" class="nav-link" data-toggle="modal" data-target="#logoutBtn">Logout</a>
+                        </li> -->
                     </ul>
                 </div>
             </nav>
@@ -93,7 +103,7 @@
         </div>
     </div>
 
-    <!-- Sign Out Modal -->
+    <!-- Sign up Modal -->
     <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
@@ -317,6 +327,8 @@
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-functions.js"></script>
+
     <script>
         const firebaseConfig = {
             apiKey: "AIzaSyD1mb8-0_Vu5sZ12e-kglm_roQ3zOGGmM0",
@@ -331,6 +343,7 @@
 
         const auth = firebase.auth();
         const db = firebase.firestore();
+        const functions = firebase.functions();
     //Setting no longer required /'_'/
     // db.settings( {
       //   timestampsInSnapshots:true
@@ -340,6 +353,7 @@
     </script>
     <script src="scripts/auth.js"></script>
     <script src="scripts/index.js"></script>
+    
 </body>
 
 </html>

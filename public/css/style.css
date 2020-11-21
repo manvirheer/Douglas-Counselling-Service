@@ -64,6 +64,8 @@ body {
   background-color: #14213d
 }
 
+
+
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important
 }
@@ -239,7 +241,7 @@ textarea {
   line-height: inherit
 }
 
-button,
+button,[type = date],
 input {
   overflow: visible
 }
@@ -486,6 +488,26 @@ small {
 .figure-caption {
   font-size: 90%;
   color: #595959
+}
+section {
+  padding: 3rem 0;
+}
+
+.section-title {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--light-color);
+}
+
+.section-title:after {
+  display: block;
+  content: "";
+  width: 6rem;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  margin: auto;
+  margin-bottom: 3rem;
 }
 
 code {
@@ -864,6 +886,7 @@ textarea.form-control {
   display: block;
   padding-left: 1.25rem
 }
+
 
 .form-check-input {
   position: absolute;

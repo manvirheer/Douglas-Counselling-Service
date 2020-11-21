@@ -1,3 +1,9 @@
+// $(document).ready(function(){
+   
+//     $('#bookAppointment').load("index-userPortal.html");
+ 
+//  });
+
 auth.onAuthStateChanged(user => {
     if (user) {
         //  console.log("User logged in: ", user)
