@@ -121,13 +121,70 @@
 
         <!-- Hero -->
         <div class="container py-5">
-            <h1 class="display-4 pb-2 ml-0">Book a visit today.</h1>
+            <h3 class="display-4 pb-2 ml-0">Provide Availability for Counseling</h3>
             <hr class="border-3 border-white my-4 ml-0 text-left w-25" role="presentation">
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-lg-10">
                     <p class="font-sans lead mb-4 text-secondary">Find a date and time which is suitable for you.</p>
                 </div>
+            </div> -->
+        </div>
+            <!-- Provide Availability form-->
+            <div class = "availability-content" role="dialog" aria-labelledby="provideAvailabilityTitle" aria-hidden="true">
+                <form>
+                    <label for="fname" style="color: white;">Name</label><br>
+                    <input type="text" id="fname" name="fname" value="John"><br>
+                    <label for="lname" style="color: white;">Last name:</label><br>
+                    <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                    <input type="submit" value="Submit">
+                </form>
             </div>
+           <!-- <div class="modal fade" id="provideAvailability" tabindex="-1" role="dialog" aria-labelledby="provideAvailabilityTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary text-black" id="provideAvailabilityTitle">Provide Availability</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="provideAvailability-form" >
+                        <div class="form-group form-col">
+                            <label for="counselorName"style="color: black;">Name</label><br>
+                            <input type="text" id="name"  required>
+                        </div>
+                    
+                        <div class="form-group"> 
+                            <label for="counselingDate" style="color: black;">Date</label><br>
+                            <input type="date" id="date"  required>
+                        </div>
+                        <div class="form-group"> 
+                            <label for="counselingTime" style="color: black;">Time</label><br>
+                            <input type="time" id="time"  required>
+                        </div>
+                        <div>
+                            <label for="description"style="color: black;">Description</label><br>
+                            <textarea id="description" cols="30" rows="5" placeholder="Optional..."></textarea>
+                        </div>
+                        <div class="form-group">
+                            <select id="status" required>
+                                <option value="0">Chat</option>
+                                <option value="1">Video</option>
+                            </select>
+                        </div>                             
+                    </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                        </form>
+
+
+            </div>
+        </div>
+    </div>  -->
             <div class="text-center my-5">
                 <a href="https://www.douglascollege.ca/student-services/student-support/counselling"
                     class="btn btn-outline-white">Calender</a>
