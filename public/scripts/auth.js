@@ -79,6 +79,7 @@ signInForm.addEventListener('submit', (e) => {
                     console.log(doc.id, " => ", doc.data());
 
                 });
+                window.open("http://127.0.0.1:5500/public/studentPortal.html");
             })
         $('#signInModal').modal('hide');
 

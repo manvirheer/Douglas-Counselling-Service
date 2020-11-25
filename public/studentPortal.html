@@ -1,4 +1,4 @@
-<!doctype html>
+<!Doctype html>
 <html lang="en">
 
 <head>
@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <!-- Favicon -->
     <link rel="icon" href="assets/img/icon.png" type="image/png">
@@ -46,8 +46,8 @@
                 <div class="collapse navbar-collapse text-uppercase" id="navbarContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a type="button" class="nav-link" data-toggle="modal" data-target="#profileModal"><i class="material-icons  "
-                                    aria-hidden="true">person_outline</i></a>
+                            <a type="button" class="nav-link" data-toggle="modal" data-target="#profileModal"><i
+                                    class="material-icons  " aria-hidden="true">person_outline</i></a>
                         </li>
 
                     </ul>
@@ -77,7 +77,7 @@
 
             </div>
         </div>
-    </div> 
+    </div>
     <!-- Sign In Modal -->
     <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalTitle"
         aria-hidden="true">
@@ -120,85 +120,38 @@
     <main id="content">
 
         <!-- Hero -->
+        <
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-10">
-                    <p class="font-sans lead mb-4 text-secondary">Booked Appointments</p>
+                    <p class="font-sans lead mb-1 text-secondary">Booked Appointments</p>
                 </div>
             </div>
-            <hr class="border-2 border-white my-7 ml-0 text-left w-25" role="presentation">
-            
+            <hr class="border-1 border-white my-7 ml-0 text-left w-65" role="presentation">
+
             <!-- <a href="https://themes.getbootstrap.com/product/focus/" class="btn btn-primary">Purchase - $39</a> -->
-        </div>
 
-        <!-- Projects -->
-        <div class="container py-4">
-            <!-- <ul class="row list-unstyled">
-                <li class="col-md-6 mb-3">
-                    <a href="portfolio-1.html">
-                        <figure>
-                            <div class="img-overlay mb-3">
-                                <img src="assets/img/portfolio-1.jpg" alt="Architecture" class="img-thumbnail">
-                                <div class="img-hover">
-                                    <p class="img-text">View Page</p>
-                                </div>
-                            </div>
-                            <figcaption class="h5 font-weight-normal text-center">Architecture</figcaption>
-                        </figure>
-                    </a>
-                </li>
-
-                <li class="col-md-6 mb-3">
-                    <a href="portfolio-2.html">
-                        <figure>
-                            <div class="img-overlay mb-3">
-                                <img src="assets/img/portfolio-2.jpg" alt="Interior Design" class="img-thumbnail">
-                                <div class="img-hover">
-                                    <p class="img-text">View Page</p>
-                                </div>
-                            </div>
-                            <figcaption class="h5 font-weight-normal text-center">Interior Design</figcaption>
-                        </figure>
-                    </a>
-                </li>
-
-                <li class="col-md-6 mb-3">
-                    <a href="portfolio-3.html">
-                        <figure>
-                            <div class="img-overlay mb-3">
-                                <div class="img">
-                                    <a class="twitter-timeline" data-width="ml-auto" data-height="350px" data-dnt="true"
-                                        data-theme="dark"
-                                        href="https://twitter.com/MentalHelpNet?ref_src=twsrc%5Etfw">Tweets by
-                                        MentalHelpNet</a>
-                                    <script async src="https://platform.twitter.com/widgets.js"
-                                        charset="utf-8"></script>
-                                </div>
-                            </div>
-                            <figcaption class="h5 font-weight-normal text-center">Tweets</figcaption>
-                        </figure>
-                    </a>
-                </li>
-
-                <li class="col-md-6 mb-3">
-                    <a href="portfolio-4.html">
-                        <figure>
-                            <div class="img-overlay mb-3">
-                                <img src="assets/img/portfolio-4.jpg" alt="Web Design" class="img-thumbnail">
-                                <div class="img-hover">
-                                    <div class="img-text">View Page</div>
-                                </div>
-                            </div>
-                            <figcaption class="h5 font-weight-normal text-center">Web Design</figcaption>
-                        </figure>
-                    </a>
-                </li>
-            </ul> -->
+            <table class="table table-responsive-md" >
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Time</th>
+                        <th>Counsellor</th>
+                        <th>Cancel</th>
+                    </tr>
+                </thead>
+                <tbody id="tbl-bookedAp">
+                   
+            </table>
 
         </div>
-
-        <!-- Testimonials -->
-        <!-- <div class="bg-white text-black">
+            <div class="bg-primary text-dark text-center">
+            <div class="container py-4">
+                <p class="font-sans lead mb-3">Click Here to Book a New Appointments</p>
+                <a href="http://localhost:5500/public/bookAppointment.html" class="btn btn-outline-dark">Book Now</a>
+            </div>
+            <!-- Testimonials -->
+            <!-- <div class="bg-white text-black">
             <div class="container py-6">
                 <h2 class="h3 text-center mb-5">What people are saying…</h2>
                 <div class="row">
@@ -246,30 +199,31 @@
     <footer class="bg-white text-dark">
         <div class="container py-5 py-md-6">
             <div class="row justify-content-md-between">
-                <!-- <div class="col-4 col-md-2">
+                <div class="col-4 col-md-2">
                     <h2 class="h6">About</h2>
                     <ul class="nav flex-column">
-                        <li class="mb-1"><a href="#" class="text-muted">Team</a></li>
+                        <li class="mb-1"><a id="adminSignInModal" type="button" class="text-muted" data-toggle="modal"
+                            data-target="#adminSignInModal">Admin Portal</a></li>
                         <li class="mb-1"><a href="#" class="text-muted">Credits</a></li>
                         <li class="mb-1"><a href="#" class="text-muted">Government Guidelines</a></li>
                         <li class="mb-1"><a href="#" class="text-muted">Privacy Policy</a></li>
                     </ul>
-                </div> -->
+                </div>
 
                 <div class="col-4 col-md-2">
-                    <!-- <h2 class="h6 mb-3">Social</h2>
+                    <h2 class="h6 mb-3">Social</h2>
                     <ul class="nav flex-column">
                         <li class="mb-1"><a href="#" class="text-muted">Twitter</a></li>
                         <li class="mb-1"><a href="#" class="text-muted">Instagram</a></li>
                         <li class="mb-1"><a href="#" class="text-muted">Dribbble</a></li>
                         <li class="mb-1"><a href="#" class="text-muted">Facebook</a></li>
-                    </ul> -->
+                    </ul>
                 </div>
                 <div class="col-sm-12 col-md-4 mt-4 mt-md-0">
-                    <!-- <h2 class="h6 mb-3">Douglas College</h2>
+                    <h2 class="h6 mb-3">Douglas College</h2>
                     <p class="text-sans">We would like to acknowledge that Douglas College campuses, where we live,
                         learn, work and play, are located on the unceded traditional territories of the Coast Salish
-                        Peoples of the QayQayt and Kwikwetlem First Nations..</p> -->
+                        Peoples of the QayQayt and Kwikwetlem First Nations..</p>
                 </div>
             </div>
         </div>
