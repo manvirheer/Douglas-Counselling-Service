@@ -1,8 +1,8 @@
-<!doctype html>
+<!Doctype html>
 <html lang="en">
 
 <head>
-    <title>Home - Focus Theme</title>
+    <title>Counsellor Portal</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <!-- Favicon -->
     <link rel="icon" href="assets/img/icon.png" type="image/png">
@@ -36,8 +36,9 @@
         <div class="container">
             <!-- Navbar -->
             <nav class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
-                <a href="index.html" class="navbar-brand d-inline-flex ">Douglas College Counselling Service <i
-                        class="material-icons ml-2" aria-hidden="true">show_chart</i></a>
+                <a href="index.html" class="navbar-brand d-inline-flex " id="counsellorGreetings">Welcome
+                    <!-- <i class="material-icons ml-2" aria-hidden="true">show_chart</i> -->
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
                     aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -45,17 +46,38 @@
                 <div class="collapse navbar-collapse text-uppercase" id="navbarContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a type="button" class="nav-link" data-toggle="modal" data-target="#signInModal">Sign-In</a>
+                            <a type="button" class="nav-link" data-toggle="modal" data-target="#profileModal"><i
+                                    class="material-icons  " aria-hidden="true">person_outline</i></a>
                         </li>
-                        <li class="nav-item">
-                            <a type="button" class="nav-link" data-toggle="modal" data-target="#signUpModal">Sign-Up</a>
-                        </li>
+
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
 
+    <!-- Profile Header -->
+    <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary text-black" id="signInModalTitle">Profile</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <button type="button" class="btn btn-info" id="logoutBtn">Logout</button>
+                </div>
+                <!-- <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div> -->
+
+            </div>
+        </div>
+    </div>
     <!-- Sign In Modal -->
     <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalTitle"
         aria-hidden="true">
@@ -73,13 +95,14 @@
                             <label for="signInStudentEmail">Email address</label>
                             <input type="email" class="form-control" id="signInStudentEmail" name="signInStudentEmail"
                                 aria-describedby="emailHelp" required>
-                            <small id="signIn-emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            <small id="signIn-emailHelp" class="form-text text-muted">We'll never share your email with
+                                anyone
                                 else.</small>
                         </div>
                         <div class="form-group">
                             <label for="studentPassword">Password</label>
-                            <input type="password" class="form-control" id="signInStudentPassword" name="signInStudentPassword"
-                                required>
+                            <input type="password" class="form-control" id="signInStudentPassword"
+                                name="signInStudentPassword" required>
                         </div>
                 </div>
                 <div class="modal-footer">
@@ -93,179 +116,67 @@
         </div>
     </div>
 
-    <!-- Sign up Modal -->
-    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-primary text-black" id="signUpModalTitle">Sign Up</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="signUp-form">
-                        <div class="form-group">
-                            <label for="signUpFirstName">First Name</label>
-                            <input class="form-control" type="text" id="signUpFirstName" name="signUpFirstName"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label for="signUpLastName">Last Name</label>
-                            <input class="form-control" type="text" id="signUpLastName" name="signUpLastName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="studentID">Student ID</label>
-                            <input type="text" class="form-control" id="signUpStudentID" name="signUpStudentID"
-                                required>
-                        </div>
-                        <div class="form-group">
-                            <label for="studentEmail">Email address</label>
-                            <input type="email" class="form-control" id="signUpStudentEmail" name="signUpStudentEmail"
-                                aria-describedby="emailHelp" required>
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                                else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="studentPassword">Password</label>
-                            <input type="password" class="form-control" id="signUpStudentPassword"
-                                name="signUpStudentPassword" required>
-                        </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin Sign In Modal -->
-    <div class="modal fade" id="adminSignInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-primary text-black" id="adminSignInModalTitle">Admin Sign In</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="adminSignIn-form">
-                        <div class="form-group">
-                            <label for="adminSignInEmail">Email address</label>
-                            <input type="email" class="form-control" id="adminSignInEmail" name="adminSignInEmail"
-                                aria-describedby="emailHelp" required>
-                            <small id="signIn-emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                                else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="adminSignInPassword">Password</label>
-                            <input type="password" class="form-control" id="adminSignInPassword" name="adminSignInPassword"
-                                required>
-                        </div>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                </form>
-
-
-            </div>
-        </div>
-    </div>
 
     <main id="content">
 
         <!-- Hero -->
+        <
         <div class="container py-5">
-            <h1 class="display-3 pb-2">Here to Help.</h1>
-            <hr class="border-3 border-white my-4 ml-0 text-left w-25" role="presentation">
             <div class="row">
                 <div class="col-lg-10">
-                    <p class="font-sans lead mb-4 text-secondary">Douglas College counsellors provide free, accessible,
-                        confidential and professional support to students. We provide one-to-one support and workshops
-                        to help you learn skills to better handle stress, increase resilience, manage sudden personal
-                        challenges, or just feel better.</p>
+                    <p class="font-sans lead mb-1 text-secondary">Future Booked Appointments by Students</p>
                 </div>
             </div>
-            <div class="text-center my-5">
-                <a href="https://www.douglascollege.ca/student-services/student-support/counselling"
-                    class="btn btn-outline-white">View More</a>
-            </div>
+            <hr class="border-1 border-white my-7 ml-0 text-left w-65" role="presentation">
+
             <!-- <a href="https://themes.getbootstrap.com/product/focus/" class="btn btn-primary">Purchase - $39</a> -->
-        </div>
 
-        <!-- Projects -->
-        <div class="container py-4">
-            <!-- <ul class="row list-unstyled">
-                <li class="col-md-6 mb-3">
-                    <a href="portfolio-1.html">
-                        <figure>
-                            <div class="img-overlay mb-3">
-                                <img src="assets/img/portfolio-1.jpg" alt="Architecture" class="img-thumbnail">
-                                <div class="img-hover">
-                                    <p class="img-text">View Page</p>
-                                </div>
-                            </div>
-                            <figcaption class="h5 font-weight-normal text-center">Architecture</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li class="col-md-6 mb-3">
-                    <a href="portfolio-2.html">
-                        <figure>
-                            <div class="img-overlay mb-3">
-                                <img src="assets/img/portfolio-2.jpg" alt="Interior Design" class="img-thumbnail">
-                                <div class="img-hover">
-                                    <p class="img-text">View Page</p>
-                                </div>
-                            </div>
-                            <figcaption class="h5 font-weight-normal text-center">Interior Design</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li class="col-md-6 mb-3">
-                    <a href="portfolio-3.html">
-                        <figure>
-                            <div class="img-overlay mb-3">
-                                <div class="img">
-                                    <a class="twitter-timeline" data-width="ml-auto" data-height="350px" data-dnt="true"
-                                        data-theme="dark"
-                                        href="https://twitter.com/MentalHelpNet?ref_src=twsrc%5Etfw">Tweets by
-                                        MentalHelpNet</a>
-                                    <script async src="https://platform.twitter.com/widgets.js"
-                                        charset="utf-8"></script>
-                                </div>
-                            </div>
-                            <figcaption class="h5 font-weight-normal text-center">Tweets</figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li class="col-md-6 mb-3">
-                    <a href="portfolio-4.html">
-                        <figure>
-                            <div class="img-overlay mb-3">
-                                <img src="assets/img/portfolio-4.jpg" alt="Web Design" class="img-thumbnail">
-                                <div class="img-hover">
-                                    <div class="img-text">View Page</div>
-                                </div>
-                            </div>
-                            <figcaption class="h5 font-weight-normal text-center">Web Design</figcaption>
-                        </figure>
-                    </a>
-                </li>
-            </ul> -->
-            
-        </div>
+            <table class="table table-responsive-md" >
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Time</th>
+                        <th>Student Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tbl-bookedAp">
+                   
+            </table>
 
-        <!-- Testimonials -->
-        <!-- <div class="bg-white text-black">
+        </div>
+            <div class="bg-primary text-dark text-center">
+            <div class="container py-4">
+                <p class="font-sans lead mb-3">Click Here to Add a New Availability</p>
+                <form id="availability-form">
+                    <div class="form-group">
+                        <label for="signInStudentEmail">Start Time</label>
+                        <input type="datetime-local" class="form-control" id="signInStudentEmail" name="signInStudentEmail"
+                            aria-describedby="emailHelp" required>
+                      
+                    </div>
+                    <div class="form-group">
+                        <label for="signInStudentEmail">Finish Time</label>
+                        <input type="datetime-local" class="form-control" id="signInStudentEmail" name="signInStudentEmail"
+                            aria-describedby="emailHelp" required>
+                      
+                    </div>
+                    <div class="form-group">
+                        <label for="signInStudentEmail">Type</label>
+                            <select>
+                                <option>Chat</option>
+                                <option>Video</option>
+                            </select>
+                      
+                    </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+            </form>
+            </div>
+            <!-- Testimonials -->
+            <!-- <div class="bg-white text-black">
             <div class="container py-6">
                 <h2 class="h3 text-center mb-5">What people are saying…</h2>
                 <div class="row">
@@ -287,6 +198,7 @@
                                 theme is worth much more than I paid. I'm loving it.</p>
                         </blockquote>
                     </div>
+
                     <div class="col-md">
                         <blockquote class="text-center">
                             <img src="assets/img/malan-alankara.jpg" class="avatar avatar-lg mb-3" alt="Malan Alankara">
@@ -299,6 +211,7 @@
                 </div>
             </div>
         </div>
+
         <div class="bg-primary text-dark text-center">
             <div class="container py-6">
                 <h2 class="font-sans-serif">Focus is mobile-ready, flexible and cross-browser</h2>
@@ -376,8 +289,21 @@
 
 
     </script>
-    <script src="scripts/auth.js"></script>
-    <script src="scripts/index.js"></script>
+    <script>
+        console.log(db);
+        auth.onAuthStateChanged(user => {
+            if (user) {
+                console.log("User logged in: ", user)
+            }
+            else {
+                console.log("User logged out")
+            }
+        });
+
+
+    </script>
+
+    <script src="scripts/studentPortal.js"></script>
 </body>
 
 </html>
