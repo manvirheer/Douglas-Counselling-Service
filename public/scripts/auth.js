@@ -1,3 +1,5 @@
+// temporary to get user email, will change when i understand the whole code
+var UserEmailGlobal = "default";
 
 //Student Sign Up
 const signUpform = document.querySelector('#signUp-form');
@@ -71,6 +73,7 @@ signInForm.addEventListener('submit', (e) => {
         console.log(cred)
         console.log('cred.user')
         console.log(cred.user);
+        UserEmailGlobal = email;
         db.collection("users").where("uid", "==", cred.user.uid)
             .get()
             .then(function (querySnapshot) {

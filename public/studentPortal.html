@@ -118,9 +118,43 @@
 
 
     <main id="content">
+        <!-- These 2 buttons are for admin and student role, will be applied later when booking page is done 
+             For now, use this for test on chat function, the further explanation is in createchat.js -->
+        <button onclick="onClickGetChat()">
+                Get Chat ID
+        </button>
 
+        <button onclick="onClickSetChat()" >
+            Create Chat ID
+        </button>
+
+        <!-- Chat Window -->
+        <div class="chatcontainer" >
+            <!-- Chat Display -->
+            <div id="chatdisplaydiv"
+                style="margin:20 auto;
+                    width: 50%;
+                    height: 240px;
+                    overflow-y: scroll;
+                    background-color: grey;
+                    ">
+                <!-- Dynamic chat display -->
+                <ul id="chatmessagedisplay" style="padding-bottom: 35px;">
+                </ul>
+            </div>
+
+            <!-- Chat Enter Box -->
+            <div style="clear:both; background-color: honeydew; width: 50%; margin:0 auto">
+                <form onsubmit="return sendMessage();">
+                <input id="chatmessage" placeholder="Enter message" autocomplete="off" style="width: 85%;">
+                <input type="submit" value="Send" 
+                style="float: right; background-color: #ff9285; padding:8px; font-size: 20px;">
+                </form>
+            </div>
+
+        </div>
         <!-- Hero -->
-        <
+
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-10">
@@ -279,6 +313,7 @@
     </script>
 
     <script src="scripts/studentPortal.js"></script>
+    <script type="text/javascript" src="scripts/createchat.js"></script>
 </body>
 
 </html>
