@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Home - Focus Theme</title>
+    <title>Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -27,6 +27,7 @@
 
     <!-- JS -->
     <script src="scripts/theme.js" defer></script>
+    <!-- <script src="scripts/userPortal.js" defer></script> -->
 </head>
 
 <body>
@@ -45,10 +46,24 @@
                 <div class="collapse navbar-collapse text-uppercase" id="navbarContent">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a type="button" class="nav-link" data-toggle="modal" data-target="#signInModal">Sign-In</a>
+                            <a id="bookAppointment1" href="bookAppoitment.html" type="button" class="nav-link"
+                                data-target="#bookAppointment">Book Appointment</a>
                         </li>
                         <li class="nav-item">
-                            <a type="button" class="nav-link" data-toggle="modal" data-target="#signUpModal">Sign-Up</a>
+                            <a id="provideAvailability1" type="button" class="nav-link" data-toggle="modal"
+                                data-target="#provideAvailability">Provide Availability</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="signInModal1" type="button" class="nav-link" data-toggle="modal"
+                                data-target="#signInModal">Sign-In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="signUpModal1" type="button" class="nav-link" data-toggle="modal"
+                                data-target="#signUpModal">Sign-Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a id="logoutBtn1" type="button" class="nav-link" data-toggle="modal"
+                                data-target="#logoutBtn">Logout</a>
                         </li>
                     </ul>
                 </div>
@@ -73,13 +88,14 @@
                             <label for="signInStudentEmail">Email address</label>
                             <input type="email" class="form-control" id="signInStudentEmail" name="signInStudentEmail"
                                 aria-describedby="emailHelp" required>
-                            <small id="signIn-emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            <small id="signIn-emailHelp" class="form-text text-muted">We'll never share your email with
+                                anyone
                                 else.</small>
                         </div>
                         <div class="form-group">
                             <label for="studentPassword">Password</label>
-                            <input type="password" class="form-control" id="signInStudentPassword" name="signInStudentPassword"
-                                required>
+                            <input type="password" class="form-control" id="signInStudentPassword"
+                                name="signInStudentPassword" required>
                         </div>
                 </div>
                 <div class="modal-footer">
@@ -93,7 +109,55 @@
         </div>
     </div>
 
-    <!-- Sign Out Modal -->
+    <!-- Provide Availability form-->
+    <div class="modal fade" id="provideAvailability" tabindex="-1" role="dialog"
+        aria-labelledby="provideAvailabilityTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary text-black" id="provideAvailabilityTitle">Provide Availability
+                    </h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="provideAvailability-form">
+                        <div class="form-group form-col">
+                            <label for="counselorName" style="color: black;">Name</label><br>
+                            <input type="text" id="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="counselingDate" style="color: black;">Date</label><br>
+                            <input type="date" id="date" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="counselingTime" style="color: black;">Time</label><br>
+                            <input type="time" id="time" required>
+                        </div>
+                        <!-- <div>
+                            <label for="description"style="color: black;">Description</label><br>
+                            <textarea id="description" cols="30" rows="5" placeholder="Optional..."></textarea>
+                        </div> -->
+                        <div class="form-group">
+                            <select id="status" required>
+                                <option value="0">Chat</option>
+                                <option value="1">Video</option>
+                            </select>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                </form>
+
+
+            </div>
+        </div>
+    </div>
+    <!-- Sign up Modal -->
     <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
@@ -105,15 +169,19 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="signUp-form">
+                    <form id="signUp-form" method="POST">
                         <div class="form-group">
-                            <label for="studentName">Name</label>
-                            <input class="form-control" type="text" id="signUpStudentName" name="signUpStudentName" required>
+                            <label for="signUpFirstName">First Name</label>
+                            <input class="form-control" type="text" id="signUpFirstName" name="signUpFirstName"
+                                required>
                         </div>
-
+                        <div class="form-group">
+                            <label for="signUpLastName">Last Name</label>
+                            <input class="form-control" type="text" id="signUpLastName" name="signUpLastName" required>
+                        </div>
                         <div class="form-group">
                             <label for="studentID">Student ID</label>
-                            <input type="password" class="form-control" id="signUpStudentID" name="signUpStudentID"
+                            <input type="text" class="form-control" id="signUpStudentID" name="signUpStudentID"
                                 required>
                         </div>
                         <div class="form-group">
@@ -125,8 +193,15 @@
                         </div>
                         <div class="form-group">
                             <label for="studentPassword">Password</label>
-                            <input type="password" class="form-control" id="signUpStudentPassword" name="signUpStudentPassword"
-                                required>
+                            <input type="password" class="form-control" id="signUpStudentPassword"
+                                name="signUpStudentPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userType">User Type</label>
+                            <select class="form-control" id="userType" name="userType">
+                                <option>Student</option>
+                                <option>Admin</option>
+                            </select>
                         </div>
 
                 </div>
@@ -138,6 +213,52 @@
             </div>
         </div>
     </div>
+
+    <!-- Admin Sign In Modal -->
+    <div class="modal fade" id="adminSignInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalTitle"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-primary text-black" id="signUpModalTitle">Admin Sign In</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="signUp-form">
+                        
+                        <div class="form-group">
+                            <label for="studentEmail">Email address!</label>
+                            <input type="email" class="form-control" id="signUpStudentEmail" name="signUpStudentEmail"
+                                aria-describedby="emailHelp" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="studentPassword">Password</label>
+                            <input type="password" class="form-control" id="signUpStudentPassword"
+                                name="signUpStudentPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userType">User Type</label>
+                            <select class="form-control" id="userType" name="userType">
+                                <option>Student</option>
+                                <option>Admin</option>
+                            </select>
+                        </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
     <main id="content">
 
         <!-- Hero -->
@@ -222,7 +343,7 @@
                     </a>
                 </li>
             </ul> -->
-            
+
         </div>
 
         <!-- Testimonials -->
@@ -277,7 +398,8 @@
                 <div class="col-4 col-md-2">
                     <h2 class="h6">About</h2>
                     <ul class="nav flex-column">
-                        <li class="mb-1"><a href="#" class="text-muted">Team</a></li>
+                        <li class="mb-1"><a id="adminSignInModal" type="button" class="text-muted" data-toggle="modal"
+                            data-target="#adminSignInModal">Admin Portal</a></li>
                         <li class="mb-1"><a href="#" class="text-muted">Credits</a></li>
                         <li class="mb-1"><a href="#" class="text-muted">Government Guidelines</a></li>
                         <li class="mb-1"><a href="#" class="text-muted">Privacy Policy</a></li>
@@ -317,6 +439,9 @@
     <!-- Add Firebase products that you want to use -->
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-functions.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+
     <script>
         const firebaseConfig = {
             apiKey: "AIzaSyD1mb8-0_Vu5sZ12e-kglm_roQ3zOGGmM0",
@@ -331,6 +456,7 @@
 
         const auth = firebase.auth();
         const db = firebase.firestore();
+        const functions = firebase.functions();
     //Setting no longer required /'_'/
     // db.settings( {
       //   timestampsInSnapshots:true
@@ -340,6 +466,9 @@
     </script>
     <script src="scripts/auth.js"></script>
     <script src="scripts/index.js"></script>
+    <!-- <script src="scripts/bookAppoitment.js"></script> -->
+
+
 </body>
 
 </html>
