@@ -1,12 +1,8 @@
+rules_version = '2';
 service cloud.firestore {
-   match /databases/{database}/documents {
-  //   match /{document=**} {
-  //     allow read, write: if false;
-  //   }
-  
-  //match users in users collection 
-  match /students/{studentID}{
-  allow read, write: if request.auth.uid != null;
-  }
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
   }
 }

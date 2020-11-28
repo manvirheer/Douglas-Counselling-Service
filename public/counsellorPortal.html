@@ -1,8 +1,8 @@
-<!doctype html>
+<!Doctype html>
 <html lang="en">
 
 <head>
-    <title>Home - Focus Theme</title>
+    <title>Counsellor Portal</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
     <!-- Favicon -->
     <link rel="icon" href="assets/img/icon.png" type="image/png">
@@ -36,19 +36,20 @@
         <div class="container">
             <!-- Navbar -->
             <nav class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
-                <a href="index.html" class="navbar-brand d-inline-flex ">Douglas College Counselling Service <i
-                        class="material-icons ml-2" aria-hidden="true">show_chart</i></a>
+                <a href="index.html" class="navbar-brand d-inline-flex " id="counsellorGreetings">Welcome
+                    <!-- <i class="material-icons ml-2" aria-hidden="true">show_chart</i> -->
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
                     aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse text-uppercase" id="navbarContent">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a type="button" class="nav-link" data-toggle="modal" data-target="#signInModal">Sign-In</a>
+                        <li class="nav-item top-pad">
+                            <a type="button" class="nav-link" data-toggle="modal" data-target="#addModal">Add Counsellor</a>
                         </li>
                         <li class="nav-item">
-                            <a type="button" class="nav-link" data-toggle="modal" data-target="#signUpModal">Sign-Up</a>
+                            <i class="material-icons nav-link" aria-hidden="true"  data-toggle="modal" data-target="#profileModal">person_outline</i>
                         </li>
                     </ul>
                 </div>
@@ -56,56 +57,42 @@
         </div>
     </header>
 
-    <!-- Student Sign In Modal -->
-    <div class="modal fade" id="signInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalTitle"
+    <!-- Profile Header -->
+    <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-primary text-black" id="signInModalTitle">Sign In</h5>
+                    <h5 class="modal-title text-primary text-black" id="signInModalTitle">Profile</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="signIn-form">
-                        <div class="form-group">
-                            <label for="signInStudentEmail">Email address</label>
-                            <input type="email" class="form-control" id="signInStudentEmail" name="signInStudentEmail"
-                                aria-describedby="emailHelp" required>
-                            <small id="signIn-emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                                else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="studentPassword">Password</label>
-                            <input type="password" class="form-control" id="signInStudentPassword" name="signInStudentPassword"
-                                required>
-                        </div>
+                    <button type="button" class="btn btn-info" id="logoutBtn">Logout</button>
                 </div>
-                <div class="modal-footer">
+                <!-- <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                </form>
-
+                </div> -->
 
             </div>
         </div>
     </div>
 
-    <!-- Student Sign up Modal -->
-    <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalTitle"
+    <!-- Add a New Counsellor -->
+    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="signInModalTitle"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-scrollable" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-primary text-black" id="signUpModalTitle">Sign Up</h5>
+                    <h5 class="modal-title text-primary text-black" id="signInModalTitle">Add New Counsellor</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="signUp-form">
+                    <form id="add-form">
                         <div class="form-group">
                             <label for="signUpFirstName">First Name</label>
                             <input class="form-control" type="text" id="signUpFirstName" name="signUpFirstName"
@@ -116,58 +103,28 @@
                             <input class="form-control" type="text" id="signUpLastName" name="signUpLastName" required>
                         </div>
                         <div class="form-group">
-                            <label for="studentID">Student ID</label>
-                            <input type="text" class="form-control" id="signUpStudentID" name="signUpStudentID"
+                            <label for="signUpPhoneNumber">Phone Number</label>
+                            <input type="text" class="form-control" id="signUpPhoneNumber" name="signUpPhoneNumber"
                                 required>
                         </div>
                         <div class="form-group">
-                            <label for="studentEmail">Email address</label>
-                            <input type="email" class="form-control" id="signUpStudentEmail" name="signUpStudentEmail"
+                            <label for="signUpYear">Experience</label>
+                            <input type="text" class="form-control" id="signUpYear" name="signUpYear"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signInStudentEmail">Email address</label>
+                            <input type="email" class="form-control" id="signInStudentEmail" name="signInStudentEmail"
                                 aria-describedby="emailHelp" required>
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                                else.</small>
+                            <small id="signIn-emailHelp" class="form-text text-muted">We'll never share your email with
+                                anyone else.</small>
                         </div>
                         <div class="form-group">
                             <label for="studentPassword">Password</label>
-                            <input type="password" class="form-control" id="signUpStudentPassword"
-                                name="signUpStudentPassword" required>
+                            <input type="password" class="form-control" id="signInStudentPassword"
+                                name="signInStudentPassword" required>
                         </div>
-
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                </div>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin Sign In Modal -->
-    <div class="modal fade" id="adminSignInModal" tabindex="-1" role="dialog" aria-labelledby="signInModalTitle"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-scrollable" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-primary text-black" id="adminSignInModalTitle">Admin Sign In</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <form id="adminSignIn-form">
-                        <div class="form-group">
-                            <label for="adminSignInEmail">Email address</label>
-                            <input type="email" class="form-control" id="adminSignInEmail" name="adminSignInEmail"
-                                aria-describedby="emailHelp" required>
-                            <small id="signIn-emailHelp" class="form-text text-muted">We'll never share your email with anyone
-                                else.</small>
-                        </div>
-                        <div class="form-group">
-                            <label for="adminSignInPassword">Password</label>
-                            <input type="password" class="form-control" id="adminSignInPassword" name="adminSignInPassword"
-                                required>
-                        </div>
+                        
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -179,29 +136,115 @@
             </div>
         </div>
     </div>
+
 
     <main id="content">
 
         <!-- Hero -->
+        <
         <div class="container py-5">
-            <h1 class="display-3 pb-2">Here to Help.</h1>
-            <hr class="border-3 border-white my-4 ml-0 text-left w-25" role="presentation">
             <div class="row">
                 <div class="col-lg-10">
-                    <p class="font-sans lead mb-4 text-secondary">Douglas College counsellors provide free, accessible,
-                        confidential and professional support to students. We provide one-to-one support and workshops
-                        to help you learn skills to better handle stress, increase resilience, manage sudden personal
-                        challenges, or just feel better.</p>
+                    <p class="font-sans lead mb-1 text-secondary">Future Booked Appointments by Students</p>
                 </div>
             </div>
-            <div class="text-center my-5">
-                <a href="https://www.douglascollege.ca/student-services/student-support/counselling"
-                    class="btn btn-outline-white">View More</a>
-            </div>
+            <hr class="border-1 border-white my-7 ml-0 text-left w-65" role="presentation">
+
             <!-- <a href="https://themes.getbootstrap.com/product/focus/" class="btn btn-primary">Purchase - $39</a> -->
+
+            <table class="table table-responsive-md" >
+                <thead>
+                    <tr>
+                        <th>Type</th>
+                        <th>Time</th>
+                        <th>Student ID</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tbl-bookedAp">
+                   
+            </table>
+
+        </div>
+            <div class="bg-primary text-dark text-center">
+            <div class="container py-4">
+                <p class="font-sans lead mb-3">Click Here to Add a New Availability</p>
+                <form id="availability-form">
+                    <div class="form-group">
+                        <label for="signInStudentEmail">Start Time</label>
+                        <input type="datetime-local" class="form-control" id="startTimeid" name="startTimeid"
+                            aria-describedby="emailHelp" required>
+                      
+                    </div>
+                    <div class="form-group">
+                        <label for="signInStudentEmail">Finish Time</label>
+                        <input type="datetime-local" class="form-control" id="finishTimeid" name="finishTimeid"
+                            aria-describedby="emailHelp" required>
+                      
+                    </div>
+                                 
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="type" id="chat" value="Chat" checked>
+                        <label class="form-check-label" for="exampleRadios1">
+                         Chat
+                        </label> &nbsp;&nbsp;&nbsp;
+                        <input class="form-check-input" type="radio" name="type" id="video" value="Video">
+                        <label class="form-check-label" for="exampleRadios2">
+                         Video
+                        </label>
+                      
+                    </div>
+            </div>
+            <div class="modal-footer container py-4 ml-auto "  style="margin:40 auto;">
+                <button type="submit" class="center btn btn-outline-dark btn-primary">Submit</button>
+                
+            </div>
+            </form>
+            </div>
+            <!-- Testimonials -->
+            <!-- <div class="bg-white text-black">
+            <div class="container py-6">
+                <h2 class="h3 text-center mb-5">What people are saying…</h2>
+                <div class="row">
+                    <div class="col-md">
+                        <blockquote class="text-center mb-5 mb-sm-0">
+                            <img src="assets/img/tim-schoch.jpg" class="avatar avatar-lg mb-3" alt="Tim Schoch">
+                            <cite class="d-block h5 mb-1">Tim Schoch</cite>
+                            <span class="small text-muted text-uppercase">Designer</span>
+                            <p class="quote text-muted mt-3 mb-0">Focus theme is great. It really saves me time and
+                                effort. Thank you so much for your help</p>
+                        </blockquote>
+                    </div>
+                    <div class="col-md">
+                        <blockquote class="text-center mb-5 mb-md-0">
+                            <img src="assets/img/olive-mathews.jpg" class="avatar avatar-lg mb-3" alt="Olive Mathews">
+                            <cite class="d-block h5 mb-1">Olive Mathews</cite>
+                            <span class="small text-muted text-uppercase">Photographer</span>
+                            <p class="quote text-muted mt-3 mb-0">Focus is great. I will refer everyone I know. This
+                                theme is worth much more than I paid. I'm loving it.</p>
+                        </blockquote>
+                    </div>
+
+                    <div class="col-md">
+                        <blockquote class="text-center">
+                            <img src="assets/img/malan-alankara.jpg" class="avatar avatar-lg mb-3" alt="Malan Alankara">
+                            <cite class="d-block h5 mb-1">Malan Alankara</cite>
+                            <span class="small text-muted text-uppercase">Architect</span>
+                            <p class="quote text-muted mt-3 mb-0">Not able to tell you how happy I am with Focus. It's
+                                exactly what I've been looking for.</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
         </div>
 
-         
+        <div class="bg-primary text-dark text-center">
+            <div class="container py-6">
+                <h2 class="font-sans-serif">Focus is mobile-ready, flexible and cross-browser</h2>
+                <p class="lead mb-4">Impress your audiences with memorable pages that showcase your works</p>
+                <a href="https://themes.getbootstrap.com/product/focus/" class="btn btn-outline-dark">Buy now</a>
+            </div>
+        </div> -->
     </main>
 
     <footer class="bg-white text-dark">
@@ -272,8 +315,21 @@
 
 
     </script>
-    <script src="scripts/auth.js"></script>
-    <script src="scripts/index.js"></script>
+    <script>
+        console.log(db);
+        auth.onAuthStateChanged(user => {
+            if (user) {
+                console.log("User logged in: ", user)
+            }
+            else {
+                console.log("User logged out")
+            }
+        });
+
+
+    </script>
+
+    <script src="scripts/counsellorPortal.js"></script>
 </body>
 
 </html>
