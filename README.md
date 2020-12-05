@@ -10,7 +10,7 @@ Above deadline is applicable for
  - [ ] Start the Tomcat Server
    - Make sure the Tomcat is running by typing in localhost:8080/ in your browser.
  - [ ] Extract the folder into the directory where the webapps of Tomcat are, it would look something like this C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps
-   - Your extracted folder should be inside the WebApps Folders like this ..Tomcat 8.5\webapps\Douglas-Counselling-Service\
+   - Your extracted folder should be inside the WebApps Folders like this ..Tomcat 8.5\webapps\Douglas-Counselling-Service-main\
  - [ ] In your browser, use the url "http://localhost:8080/Douglas-Counselling-Service-main/public/index.jsp". It should load the web page if you have followed all the steps.
  - Use the following login credentials
    - Student Email: test@test.com
