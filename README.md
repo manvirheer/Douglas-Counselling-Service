@@ -7,7 +7,7 @@ Web site which lets the students to book appointments with counsellors, they can
 Above deadline is applicable for
  - [ ] Click on the Code button on the top right and select "Download Zip"
  - [ ] Install Tomcat Version 8.0 or higher
- - [ ] Start the Tomcat Version
+ - [ ] Start the Tomcat Server
    - Make sure the Tomcat is running by typing in localhost:8080/ in your browser.
  - [ ] Extract the folder into the directory where the webapps of Tomcat are, it would look something like this C:\Program Files\Apache Software Foundation\Tomcat 8.5\webapps
    - Your extracted folder should be inside the WebApps Folders like this ..Tomcat 8.5\webapps\Douglas-Counselling-Service\
