@@ -1,7 +1,7 @@
 # Douglas College Counselling Service
 >A counselling portal for the students of the Douglas College :book:  
 ## Description
-Web site which lets the students to book appointment, they can be either chat or video calls. Counsellors can manage or add more availability slots. :computer:  
+Web site which lets the students to book appointments with counsellors, they can be either chat or video calls. Counsellors can manage or add more availability slots. :computer:  
 ## Installation Steps
 **Main Deadline - Dec 31, 2020** 
 Above deadline is applicable for
