@@ -7,9 +7,10 @@ Web site which lets the students to book appointment, they can be either chat or
 Above deadline is applicable for
  - [ ] Click on the Code button on the top right and select "Download Zip"
    - Comprising Feedback Reviews, About Segment, SEO Management
- - [ ] Content Creation
- - [ ] Back-End to Store and Process New Users
- - [ ] Cloud function(s) to Handle the Email Sending
+ - [ ] Install Tomcat Version 8.0 or higher
+ - [ ] Start the Tomcat Version
+   - Make sure the Tomcat is running by typing in localhost:8080/ in your browser.
+ - [ ] Extract the folder into the directory where the webapps of Tomcat are
  - [ ] Database Deployment Over Cloud  
  ## How to contribute
 
