@@ -3,7 +3,7 @@
 ## Description
 Web site which lets the students to book appointments with counsellors, they can be either chat or video calls. Counsellors can manage or add more availability slots. :computer:  
 ## Installation Steps
-**Main Deadline - Dec 31, 2020** 
+**Submission - Dec 05, 2020** 
 Above deadline is applicable for
  - [ ] Click on the Code button on the top right and select "Download Zip"
  - [ ] Install Tomcat Version 8.0 or higher
