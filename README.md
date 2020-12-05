@@ -6,7 +6,6 @@ Web site which lets the students to book appointment, they can be either chat or
 **Main Deadline - Dec 31, 2020** 
 Above deadline is applicable for
  - [ ] Click on the Code button on the top right and select "Download Zip"
-   - Comprising Feedback Reviews, About Segment, SEO Management
  - [ ] Install Tomcat Version 8.0 or higher
  - [ ] Start the Tomcat Version
    - Make sure the Tomcat is running by typing in localhost:8080/ in your browser.
