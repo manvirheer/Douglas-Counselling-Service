@@ -929,6 +929,12 @@ a.btn.disabled {
   border-color: #ff9285
 }
 
+.btn-primary-1 {
+  color: #170f18;
+  background-color: #fca311;
+  border-color: #ff9285
+}
+
 .btn-primary.focus,
 .btn-primary:focus,
 .btn-primary:hover {

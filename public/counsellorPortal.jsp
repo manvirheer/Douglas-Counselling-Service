@@ -36,7 +36,7 @@
         <div class="container">
             <!-- Navbar -->
             <nav class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
-                <a href="index.html" class="navbar-brand d-inline-flex " id="counsellorGreetings">Welcome
+                <a href="index.jsp" class="navbar-brand d-inline-flex " id="counsellorGreetings">Welcome
                     <!-- <i class="material-icons ml-2" aria-hidden="true">show_chart</i> -->
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
@@ -92,7 +92,8 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form id="add-form">
+                    <form method='GET' action='counsellorPortal.jsp' >
+                    <!-- id="add-form" -->
                         <div class="form-group">
                             <label for="signUpFirstName">First Name</label>
                             <input class="form-control" type="text" id="signUpFirstName" name="signUpFirstName"
@@ -128,7 +129,8 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <!-- <button type="submit" class="btn btn-primary">Submit</button> -->
+                    <input type="submit" class="btn btn-primary" name='signUp' value='Submit'>
                 </div>
                 </form>
 
@@ -141,7 +143,7 @@
     <main id="content">
 
         <!-- Hero -->
-        <
+        
         <div class="container py-5">
             <div class="row">
                 <div class="col-lg-10">
@@ -180,6 +182,13 @@
                         <label for="signInStudentEmail">Finish Time</label>
                         <input type="datetime-local" class="form-control" id="finishTimeid" name="finishTimeid"
                             aria-describedby="emailHelp" required>
+                      
+                    </div>
+
+                    <div class="form-group">
+                        <label for="counsellorZoomLink">Zoom Link</label>
+                        <input type="text" class="form-control" id="counsellorZoomLink" name="counsellorZoomLink"
+                            >
                       
                     </div>
                                  
@@ -330,6 +339,20 @@
     </script>
 
     <script src="scripts/counsellorPortal.js"></script>
-</body>
+    <%
+    if ("GET".equalsIgnoreCase(request.getMethod())&&request.getParameter("signUp")!=null) {
 
+       String fname = request.getParameter("signUpFirstName");
+       String lname = request.getParameter("signUpLastName");
+       String phoneNumber = request.getParameter("signUpPhoneNumber");
+       String year = request.getParameter("signUpYear");
+       String email = request.getParameter("signInStudentEmail");
+       String password = request.getParameter("signInStudentPassword");
+
+       %>
+       <script>AddCounsellor('<%= fname%>','<%= lname%>','<%= phoneNumber%>','<%= year%>','<%= email%>','<%= password%>');</script>
+       <%
+    }
+   %>
+</body>
 </html>

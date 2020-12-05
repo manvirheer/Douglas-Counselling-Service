@@ -1,15 +1,9 @@
 //Student Sign Up Form
-const signUpform = document.querySelector('#signUp-form');
-signUpform.addEventListener('submit', (e) => {
-    e.preventDefault()
+//const signUpform = document.querySelector('#signUp-form');
 
-    //get user info
-    const firstName = signUpform['signUpFirstName'].value;
-    const lastName = signUpform['signUpLastName'].value;
-    const id = signUpform['signUpStudentID'].value;
-    const email = signUpform['signUpStudentEmail'].value;
-    const password = signUpform['signUpStudentPassword'].value;
-
+//called signUp function from index.jsp
+function signUp(firstName,lastName,id,email,password) {
+	console.log('working',id);
     //SignUp for Students
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
         db.collection('students').doc(cred.user.uid).set({
@@ -21,12 +15,12 @@ signUpform.addEventListener('submit', (e) => {
             joinDate: (new Date()).getTime()
           }).then(() => {
             $('#signUpModal').modal('hide');
-            signUpform.reset();
-            window.open("studentPortal.html");
+           // signUpform.reset();
+            window.open("studentPortal.jsp",'_self');
             
         });
-});
-});
+	});
+}
 
 //Counsellor Sign In
 const adminSignInForm = document.querySelector("#adminSignIn-form");
@@ -43,7 +37,7 @@ adminSignInForm.addEventListener('submit', (e) => {
                     // doc.data() is never undefined for query doc snapshots
                     console.log(doc.id, " => ", doc.data());
                 });
-                window.open("counsellorPortal.html")
+                window.open("counsellorPortal.jsp", "_self")
             })
         $('#signInModal').modal('hide');
         adminSignInForm.reset();
@@ -71,7 +65,7 @@ signInForm.addEventListener('submit', (e) => {
                 //     // doc.data() is never undefined for query doc snapshots
                 //     console.log(doc.id, " => ", doc.data());
                 // });
-                window.open("studentPortal.html");
+                window.open("studentPortal.jsp", "_self");
             })
         $('#signInModal').modal('hide');
 

@@ -39,7 +39,7 @@
 
             <!-- Navbar -->
             <nav class="navbar main-nav navbar-expand-lg navbar-dark" aria-label="Main navigation">
-                <a href="index.html" class="navbar-brand d-inline-flex text-uppercase">Douglas College Counselling Service<i
+                <a href="index.jsp" class="navbar-brand d-inline-flex text-uppercase">Douglas College Counselling Service<i
                         class="material-icons ml-2" aria-hidden="true">donut_large</i></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent"
                     aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -51,9 +51,9 @@
                             <a  type="button" class="nav-link" data-toggle="modal" data-target="#provideAvailability">Provide Availability</a>
                         </li> -->
                         <li class="nav-item">
-                            <a href="studentPortal.html" class="nav-link">Portal</a>  
+                            <a href="studentPortal.jsp" class="nav-link">Portal</a>  
                             <a href="#" class="nav-link">&nbsp;</a>  
-                            <a href="index.html" class="nav-link">Logout</a>
+                            <a href="index.jsp" class="nav-link">Logout</a>
                         </li>
                     </ul>
                 </div>
