@@ -5,7 +5,7 @@ Web site which lets the students to book appointment, they can be either chat or
 ## Installation Steps
 **Main Deadline - Dec 31, 2020** 
 Above deadline is applicable for
- - [ ] Click on the Clone button on the top right and Download it as a Zip Folder
+ - [ ] Click on the Code button on the top right and select "Download Zip"
    - Comprising Feedback Reviews, About Segment, SEO Management
  - [ ] Content Creation
  - [ ] Back-End to Store and Process New Users
