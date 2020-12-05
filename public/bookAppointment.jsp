@@ -250,11 +250,12 @@
                         <li class="mb-1"><a href="#" class="text-muted">Facebook</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-12 col-md-4 mt-4 mt-md-0">
-                    <h2 class="h6 mb-3">Company</h2>
-                    <p class="text-muted">Focus is a responsive website theme based on Bootstrap 4 and created by <a
-                            href="https://11bits.es/" target="_blank" rel="noopener">11bits</a>.</p>
-                </div>
+                  <div class="col-sm-12 col-md-4 mt-4 mt-md-0">
+                        <h2 class="h6 mb-3">Douglas College</h2>
+                        <p class="text-sans">We would like to acknowledge that Douglas College campuses, where we live,
+                        learn, work and play, are located on the unceded traditional territories of the Coast Salish
+                         Peoples of the QayQayt and Kwikwetlem First Nations..</p>
+                   </div>
             </div>
         </div>
     </footer>
